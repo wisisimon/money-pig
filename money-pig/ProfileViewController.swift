@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 class ProfileViewController : UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
@@ -37,7 +38,18 @@ class ProfileViewController : UIViewController {
     @IBAction func logOut(_ sender: UIButton) {
         
         do {
-            
+            // 登出先讓google登出
+            if let providerData = Auth.auth().currentUser?.providerData {
+                let userInfo = providerData[0]
+                
+                switch userInfo.providerID {
+                case "google.com":
+                    GIDSignIn.sharedInstance().signOut()
+                default:
+                    break
+                }
+            }
+            // 之後firebase登出
             try Auth.auth().signOut()
         }
         catch let signOutError as NSError {
