@@ -54,18 +54,18 @@ class LoginViewController: UIViewController {
             }
             
             // Email verification
-            guard let currentUser = user, currentUser.isEmailVerified else {
+            guard let currentUser = user?.user, currentUser.isEmailVerified else {
                 let alertController = UIAlertController(title: "登入錯誤", message: "您沒有驗證郵件，以致於無法登入成功，請確定是否已經驗證後，再進行登入。如果沒有收到驗證信，請再重發驗證信已予驗證，謝謝。", preferredStyle: .alert)
-                
+
                 let okayAction = UIAlertAction(title: "重發email", style: .default, handler: { (action) in
-                    user?.sendEmailVerification(completion: nil)
+                    user?.user.sendEmailVerification(completion: nil)
                 })
                 let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
                 alertController.addAction(okayAction)
                 alertController.addAction(cancelAction)
-                
+
                 self.present(alertController, animated: true, completion: nil)
-                
+
                 return
             }
             

@@ -1,9 +1,9 @@
 //
 //  UITextField+Placeholder.swift
-//  FirebaseDemo
+//  money-pig
 //
-//  Created by Simon Ng on 5/1/2017.
-//  Copyright © 2017 AppCoda. All rights reserved.
+//  Created by Mac on 2018/5/5.
+//  Copyright © 2018年 simonkira. All rights reserved.
 //
 
 import UIKit

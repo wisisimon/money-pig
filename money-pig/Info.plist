@@ -75,5 +75,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>for capturing photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>for you to choose photos to upload</string>
 </dict>
 </plist>

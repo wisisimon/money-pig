@@ -68,7 +68,7 @@ class SignUpViewController: UIViewController {
             self.view.endEditing(true)
             
             // send verification email
-            user?.sendEmailVerification(completion: nil)
+            user?.user.sendEmailVerification(completion: nil)
             
             // show verify email
             let alertController = UIAlertController(title: "Email認證", message: "已經寄出認證信，請到信箱點選郵件裡面的link，來完成註冊手續，謝謝。", preferredStyle: .alert)

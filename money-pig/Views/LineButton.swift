@@ -1,9 +1,9 @@
 //
 //  LineButton.swift
-//  FirebaseDemo
+//  money-pig
 //
-//  Created by Simon Ng on 14/12/2016.
-//  Copyright © 2016 AppCoda. All rights reserved.
+//  Created by Mac on 2018/5/5.
+//  Copyright © 2018年 simonkira. All rights reserved.
 //
 
 import UIKit

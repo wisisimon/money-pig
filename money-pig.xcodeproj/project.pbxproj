@@ -16,6 +16,11 @@
 		045797C320A05E6600AF1CAB /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797C220A05E6600AF1CAB /* mainViewController.swift */; };
 		045797C520A0AE5F00AF1CAB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797C420A0AE5F00AF1CAB /* ProfileViewController.swift */; };
 		045797C920A1745600AF1CAB /* UIViewController+HideKeyBoardWhenTaped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797C820A1745600AF1CAB /* UIViewController+HideKeyBoardWhenTaped.swift */; };
+		045797CD20A28D8600AF1CAB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797CB20A28D8500AF1CAB /* PostService.swift */; };
+		045797CE20A28D8600AF1CAB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797CC20A28D8600AF1CAB /* CacheManager.swift */; };
+		045797D120A28ECC00AF1CAB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797D020A28ECC00AF1CAB /* Post.swift */; };
+		045797D420A2973000AF1CAB /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797D320A2973000AF1CAB /* UIImage+Scale.swift */; };
+		045797D620A2A51D00AF1CAB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045797D520A2A51D00AF1CAB /* PostCell.swift */; };
 		04E15888209D644F00D526D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E15887209D644F00D526D2 /* AppDelegate.swift */; };
 		04E1588A209D644F00D526D2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E15889209D644F00D526D2 /* LoginViewController.swift */; };
 		04E1588D209D644F00D526D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E1588B209D644F00D526D2 /* Main.storyboard */; };
@@ -35,6 +40,11 @@
 		045797C220A05E6600AF1CAB /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		045797C420A0AE5F00AF1CAB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		045797C820A1745600AF1CAB /* UIViewController+HideKeyBoardWhenTaped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+HideKeyBoardWhenTaped.swift"; sourceTree = "<group>"; };
+		045797CB20A28D8500AF1CAB /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		045797CC20A28D8600AF1CAB /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		045797D020A28ECC00AF1CAB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		045797D320A2973000AF1CAB /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
+		045797D520A2A51D00AF1CAB /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		04E15884209D644F00D526D2 /* money-pig.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "money-pig.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E15887209D644F00D526D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E15889209D644F00D526D2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -70,12 +80,38 @@
 		04331A37209FF95A00380A4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				045797D520A2A51D00AF1CAB /* PostCell.swift */,
 				045797BE20A03B9600AF1CAB /* UINavigationController+Transparent.swift */,
 				045797B520A03A8D00AF1CAB /* UITextField+Placeholder.swift */,
 				04331A38209FF98700380A4F /* LineButton.swift */,
 				045797C820A1745600AF1CAB /* UIViewController+HideKeyBoardWhenTaped.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		045797CA20A28D5100AF1CAB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				045797CC20A28D8600AF1CAB /* CacheManager.swift */,
+				045797CB20A28D8500AF1CAB /* PostService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		045797CF20A28EAA00AF1CAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				045797D020A28ECC00AF1CAB /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		045797D220A2971A00AF1CAB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				045797D320A2973000AF1CAB /* UIImage+Scale.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		04E1587B209D644F00D526D2 = {
@@ -99,6 +135,9 @@
 		04E15886209D644F00D526D2 /* money-pig */ = {
 			isa = PBXGroup;
 			children = (
+				045797D220A2971A00AF1CAB /* Util */,
+				045797CF20A28EAA00AF1CAB /* Model */,
+				045797CA20A28D5100AF1CAB /* Service */,
 				04331A37209FF95A00380A4F /* Views */,
 				042FB81A209EB0E500527DC1 /* Resource */,
 				042FB818209EB05700527DC1 /* GoogleService-Info.plist */,
@@ -218,6 +257,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -228,6 +269,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,17 +321,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045797CE20A28D8600AF1CAB /* CacheManager.swift in Sources */,
 				045797BF20A03B9600AF1CAB /* UINavigationController+Transparent.swift in Sources */,
 				04E15890209D644F00D526D2 /* money_pig.xcdatamodeld in Sources */,
 				045797C520A0AE5F00AF1CAB /* ProfileViewController.swift in Sources */,
 				045797C320A05E6600AF1CAB /* mainViewController.swift in Sources */,
+				045797D120A28ECC00AF1CAB /* Post.swift in Sources */,
 				045797C920A1745600AF1CAB /* UIViewController+HideKeyBoardWhenTaped.swift in Sources */,
 				04E1588A209D644F00D526D2 /* LoginViewController.swift in Sources */,
 				045797C120A0567E00AF1CAB /* ResetPasswordViewController.swift in Sources */,
+				045797CD20A28D8600AF1CAB /* PostService.swift in Sources */,
 				04E15888209D644F00D526D2 /* AppDelegate.swift in Sources */,
 				045797B620A03A8D00AF1CAB /* UITextField+Placeholder.swift in Sources */,
 				04331A39209FF98700380A4F /* LineButton.swift in Sources */,
+				045797D420A2973000AF1CAB /* UIImage+Scale.swift in Sources */,
 				045797B420A020F600AF1CAB /* SignUpViewController.swift in Sources */,
+				045797D620A2A51D00AF1CAB /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +485,7 @@
 				DEVELOPMENT_TEAM = S7942LJ3GQ;
 				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = "money-pig/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +506,7 @@
 				DEVELOPMENT_TEAM = S7942LJ3GQ;
 				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = "money-pig/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

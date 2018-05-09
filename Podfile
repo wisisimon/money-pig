@@ -8,10 +8,14 @@ target 'money-pig' do
   # Pods for Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   # Pods for Facebook
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
   # Pods for Google Sign In
   pod 'GoogleSignIn'
+  # Pods for ImagePicker
+  pod 'ImagePicker'
 end
